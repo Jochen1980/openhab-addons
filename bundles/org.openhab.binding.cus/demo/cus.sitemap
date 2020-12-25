@@ -1,0 +1,6 @@
+sitemap cus label="Binding cus Demo" {
+    Frame label="Development" {
+        Switch item=CusDevSwitch label="Switch Test"
+        Text item=CusDevText label="Label Test"
+    }
+}
