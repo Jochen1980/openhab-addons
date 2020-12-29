@@ -44,12 +44,14 @@ public class jobaHandler extends BaseThingHandler {
 
     @Override
     public void handleCommand(ChannelUID channelUID, Command command) {
-        if (CHANNEL_1.equals(channelUID.getId())) {
+        String idStr = channelUID.getId();
+        if (CHANNEL_2.equals(idStr)) {
             if (command instanceof RefreshType) {
                 // TODO: handle data refresh
             }
-            String d = "aaa";
             // TODO: handle command
+            logger.info("-> JobaBinding (v 1.4): JobaDevSwitch was triggered.");
+
 
             // Note: if communication with thing fails for some reason,
             // indicate that by setting the status with detail information:
