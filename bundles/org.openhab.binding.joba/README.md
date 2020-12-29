@@ -8,6 +8,13 @@ _If possible, provide some resources like pictures, a YouTube video, etc. to giv
 
 ## Supported Things
 
+* JobaThing vom ThingType 'sample', siehe thing-types.xml
+* JobaThingHandler-Klasse
+* Backendparameter: String config1 (siehe jobaConfiguration)
+* Channel 1: id = channel1, ChannelType sample-channel, ItemType String
+* Channel 2: id = switch1, ChannelType jobaswitch, ItemType Switch (siehe thing-types.xml und jobaBindingConstants.java)
+* Eventhandling in 
+
 _Please describe the different supported things / devices within this section._
 _Which different types are supported, which models were tested etc.?_
 _Note that it is planned to generate some part of this based on the XML files within ```src/main/resources/OH-INF/thing``` of your binding._

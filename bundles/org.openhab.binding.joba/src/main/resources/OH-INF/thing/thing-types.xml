@@ -11,6 +11,7 @@
 
 		<channels>
 			<channel id="channel1" typeId="sample-channel"/>
+			<channel id="switch1" typeId="jobaswitch"/>
 		</channels>
 
 		<config-description>
@@ -24,9 +25,16 @@
 
 	<!-- Sample Channel Type -->
 	<channel-type id="sample-channel">
-		<item-type>jobaItem</item-type>
+		<item-type>String</item-type>
 		<label>joba Binding Channel</label>
 		<description>Sample channel for joba Binding</description>
+	</channel-type>
+
+	<channel-type id="jobaswitch">
+		<item-type>Switch</item-type>
+		<label>Joba Switch</label>
+		<description>The switch channel allows to switch the DevItem on and off.
+		</description>
 	</channel-type>
 
 </thing:thing-descriptions>

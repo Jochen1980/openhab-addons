@@ -48,7 +48,7 @@ public class jobaHandler extends BaseThingHandler {
             if (command instanceof RefreshType) {
                 // TODO: handle data refresh
             }
-
+            String d = "aaa";
             // TODO: handle command
 
             // Note: if communication with thing fails for some reason,

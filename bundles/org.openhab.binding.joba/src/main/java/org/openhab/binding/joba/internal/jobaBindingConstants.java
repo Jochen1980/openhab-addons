@@ -31,4 +31,5 @@ public class jobaBindingConstants {
 
     // List of all Channel ids
     public static final String CHANNEL_1 = "channel1";
+    public static final String CHANNEL_2 = "switch1";
 }
