@@ -2,5 +2,6 @@ sitemap joba label="Binding joba Demo" {
     Frame label="Development" {
         Switch item=JobaDevSwitch
         Text item=JobaDevText
+        Switch item=JobaRuleSwitch
     }
 }

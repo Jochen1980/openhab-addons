@@ -1,13 +1,6 @@
 # joba Binding
 
-IDE: intellj
-
-_Give some details about what this binding is meant for - a protocol, system, specific device._
-
-_If possible, provide some resources like pictures, a YouTube video, etc. to give an impression of what can be done with this binding. You can place such resources into a `doc` folder next to this README.md._
-
-## Supported Things
-
+## Notes
 * JobaThing vom ThingType 'sample', siehe thing-types.xml
 * JobaThingHandler-Klasse
 * Backendparameter: String config1 (siehe jobaConfiguration)
@@ -15,51 +8,40 @@ _If possible, provide some resources like pictures, a YouTube video, etc. to giv
 * Channel 2: id = switch1, ChannelType jobaswitch, ItemType Switch (siehe thing-types.xml und jobaBindingConstants.java)
 * Eventhandling in 
 
-_Please describe the different supported things / devices within this section._
-_Which different types are supported, which models were tested etc.?_
-_Note that it is planned to generate some part of this based on the XML files within ```src/main/resources/OH-INF/thing``` of your binding._
+## User Interface
+* OH3: neuer Weg, basic ui weiterhin moeglich
+* Pages-Konzept: 
+  * localhost:8080 - User Sicht fuer alle.
+  * localhost:8080 - Eingeloggt ist man im Adminpanel.
+  * Beispiel-UI in Demo - https://demo.openhab.org/#!/page/temperatures
+* Python-Rules-Konzept: 
+  * tbd
+* Persistenz
+  * Konfiguration in xyz.persist Dateien, etwa 
+  * bei items kann die strategy via Attribut angegeben werden.
+  * DB liegt etwa in /var/lib/openhab/peristence/rrd4j/
+  * rrd4j Daten lassen sich am besten via Rest-API betrachten, http://IP:PORT/rest/persistence/rrd4j/ITEMNAME
+  * etwa http://localhost:8080/rest/persistence/items/JobaDevSwitch (man muss eingeloggt sein)
+  * InfluxDB ist beliebt und hier wird 
 
-## Discovery
 
-_Describe the available auto-discovery features here. Mention for what it works and what needs to be kept in mind when using it._
+## Ways to go for CUS binding
+* Call via Postman
+* Integrate it here
+* Enrich it to a use case
+* commit the addon
 
-## Binding Configuration
+## Comparison WebThings Approaches
+* Developers sind Sven und Gregor
 
-_If your binding requires or supports general configuration settings, please create a folder ```cfg``` and place the configuration file ```<bindingId>.cfg``` inside it. In this section, you should link to this file and provide some information about the options. The file could e.g. look like:_
 
-```
-# Configuration for the Philips Hue Binding
-#
-# Default secret key for the pairing of the Philips Hue Bridge.
-# It has to be between 10-40 (alphanumeric) characters
-# This may be changed by the user for security reasons.
-secret=openHABSecret
-```
-
-_Note that it is planned to generate some part of this based on the information that is available within ```src/main/resources/OH-INF/binding``` of your binding._
-
-_If your binding does not offer any generic configurations, you can remove this section completely._
-
-## Thing Configuration
-
-_Describe what is needed to manually configure a thing, either through the (Paper) UI or via a thing-file. This should be mainly about its mandatory and optional configuration parameters. A short example entry for a thing file can help!_
-
-_Note that it is planned to generate some part of this based on the XML files within ```src/main/resources/OH-INF/thing``` of your binding._
-
-## Channels
-
-_Here you should provide information about available channel types, what their meaning is and how they can be used._
-
-_Note that it is planned to generate some part of this based on the XML files within ```src/main/resources/OH-INF/thing``` of your binding._
-
-| channel  | type   | description                  |
-|----------|--------|------------------------------|
-| control  | Switch | This is the control channel  |
-
-## Full Example
-
-_Provide a full usage example based on textual configuration files (*.things, *.items, *.sitemap)._
-
-## Any custom content here!
-
-_Feel free to add additional sections for whatever you think should also be mentioned about your binding!_
+## Comparison HomeConnect Approaches
+* Developers sind Stefan und Jonas
+* Github Stefan (S): https://github.com/Jochen1980/org.openhab.binding.homeconnect
+* Github Jonas (J): https://github.com/bruestel/org.openhab.binding.homeconnect/tree/2.5.x-next/bundles/org.openhab.binding.homeconnect
+* Genereller Vergleich
+    * J: hat einen geordneten Aufbau, Readme sehr gut. 
+* thing-types.xml
+    * J: ueblichsten Geraete sind mit drin, leider kein Cook-It
+    * J: Client-Aufbau gefaellt mir sehr gut. 
+    

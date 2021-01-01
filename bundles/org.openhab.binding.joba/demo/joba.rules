@@ -1,0 +1,14 @@
+
+# rule "RuleSwitchAutoOff"
+#when
+#    Item JobaDevSwitch received command ON
+#then
+#    JobaRuleSwitch.sendCommand(OFF)
+#end
+
+#rule "RuleSwitchAutoOn"
+#when
+#    Item JobaDevSwitch received command OFF
+#then
+#    JobaRuleSwitch.sendCommand(ON)
+#end

@@ -1,2 +1,3 @@
 Switch  JobaDevSwitch "JobaDevSwitch"   {channel="joba:sample:5d4ea39092:switch1"}
 String  JobaDevText   "JobaDevText"     {channel="joba:sample:5d4ea39092:channel1"}
+Switch  JobaRuleSwitch "JobaRuleSwitch"
