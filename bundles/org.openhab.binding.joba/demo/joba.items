@@ -5,8 +5,8 @@ Switch  JobaRuleSwitch "JobaRuleSwitch"
 DateTime localLastMeasurement "Timestamp of Last Measurement [%1$tY-%1$tm-%1$tdT%1$tH:%1$tM:%1$tS]" <time> { channel="openweathermap:onecall:api:local:current#time-stamp" }
 //DateTime localTodaySunrise "Todays Sunrise [%1$tY-%1$tm-%1$tdT%1$tH:%1$tM:%1$tS]" <time> { channel="openweathermap:onecall:api:local:current#sunrise" }
 //DateTime localTodaySunset "Todays Sunset [%1$tY-%1$tm-%1$tdT%1$tH:%1$tM:%1$tS]"  <time> { channel="openweathermap:onecall:api:local:current#sunset" }
-//String localCurrentCondition "Current Condition [%s]" <sun_clouds> { channel="openweathermap:onecall:api:local:current#condition" }
-//Image localCurrentConditionIcon "Icon" { channel="openweathermap:onecall:api:local:current#icon" }
+String localCurrentCondition "Current Condition [%s]" <sun_clouds> { channel="openweathermap:onecall:api:local:current#condition" }
+Image localCurrentConditionIcon "Icon" { channel="openweathermap:onecall:api:local:current#icon" }
 Number:Temperature localCurrentTemperature "Current Temperature [%.1f %unit%]" <temperature> { channel="openweathermap:onecall:api:local:current#temperature" }
 //Number:Temperature localCurrentApparentTemperature "Current Apparent Temperature [%.1f %unit%]" <temperature> { channel="openweathermap:onecall:api:local:current#apparent-temperature" }
 //Number:Pressure localCurrentPressure "Current barometric Pressure [%.1f %unit%]" <pressure> { channel="openweathermap:onecall:api:local:current#pressure" }

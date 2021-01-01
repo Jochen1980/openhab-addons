@@ -1,4 +1,4 @@
 Bridge openweathermap:weather-api:api "OpenWeatherMap Account" [apikey="b6d861f1acaf39876b1c1dca0c029a33", refreshInterval=60, language="de"] {
     Thing onecall local "Local Weather and Forecast" [location="49.3368925,11.2926725"]
-    Thing onecall-history local-history "Local History" [location="25.782403,-80.264563", historyDay=1]
+    Thing onecall-history local-history "Local History" [location="49.3368925,11.2926725", historyDay=1]
 }
