@@ -78,12 +78,16 @@ This is an optional parameter and multiple values are allowed.
 | `callList`                 | `String`                  |     x    | A string containing the call list as JSON (see below)          |    
 | `deviceLog`                | `String`                  |     x    | A string containing the last log messages                      |
 | `dslCRCErrors`             | `Number:Dimensionless`    |     x    | DSL CRC Errors                                                 |
+| `dslDownstreamMaxRate`     | `Number:DataTransferRate` |     x    | DSL Max Downstream Rate                                        |
+| `dslDownstreamCurrRate`    | `Number:DataTransferRate` |     x    | DSL Curr. Downstream Rate                                      |
 | `dslDownstreamNoiseMargin` | `Number:Dimensionless`    |     x    | DSL Downstream Noise Margin                                    |
 | `dslDownstreamAttenuation` | `Number:Dimensionless`    |     x    | DSL Downstream Attenuation                                     |
 | `dslEnable`                | `Switch`                  |          | DSL Enable                                                     |
 | `dslFECErrors`             | `Number:Dimensionless`    |     x    | DSL FEC Errors                                                 |
 | `dslHECErrors`             | `Number:Dimensionless`    |     x    | DSL HEC Errors                                                 |
 | `dslStatus`                | `Switch`                  |          | DSL Status                                                     |
+| `dslUpstreamMaxRate`       | `Number:DataTransferRate` |     x    | DSL Max Upstream Rate                                          |
+| `dslUpstreamCurrRate`      | `Number:DataTransferRate` |     x    | DSL Curr. Upstream Rate                                        |
 | `dslUpstreamNoiseMargin`   | `Number:Dimensionless`    |     x    | DSL Upstream Noise Margin                                      |
 | `dslUpstreamAttenuation`   | `Number:Dimensionless`    |     x    | DSL Upstream Attenuation                                       |
 | `inboundCalls`             | `Number`                  |     x    | Number of inbound calls within the given number of days.       |
@@ -127,4 +131,23 @@ If only a specific phonebook from the device should be used, this can be specifi
 The default is to use all available phonebooks from the specified thing.
 In case the format of the number in the phonebook and the format of the number from the channel are different (e.g. regarding country prefixes), the `matchCount` parameter can be used.
 The configured `matchCount` is counted from the right end and denotes the number of matching characters needed to consider this number as matching.
+A `matchCount` of `0` is considered as "match everything".
 
+## Rule Action
+
+The phonebooks of a `fritzbox` thing can be used to lookup a number from rules via a thing action:
+
+`String name = phonebookLookup(String number, String phonebook, int matchCount)`
+
+`phonebook` and `matchCount` are optional parameters.
+You can omit one or both of these parameters.
+The configured `matchCount` is counted from the right end and denotes the number of matching characters needed to consider this number as matching.
+A `matchCount` of `0` is considered as "match everything" and is used as default if no other value is given.
+The return value is either the phonebook entry (if found) or the input number.
+
+Example (use all phonebooks, match 5 digits from right):
+
+```
+val tr064Actions = getActions("tr064","tr064:fritzbox:2a28aee1ee")
+val result = tr064Actions.phonebookLookup("49157712341234", 5)
+```
