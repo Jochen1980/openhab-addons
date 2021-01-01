@@ -4,4 +4,138 @@ sitemap joba label="Binding joba Demo" {
         Text item=JobaDevText
         Switch item=JobaRuleSwitch
     }
+    Frame label="Current local weather" {
+            Text item=localLastMeasurement
+            Text item=localCurrentCondition
+            //Image item=localCurrentConditionIcon
+            //Text item=localCurrentTemperature
+            //Text item=localCurrentApparentTemperature
+            //Text item=localCurrentPressure
+            //Text item=localCurrentHumidity
+            //Text item=localCurrentDewpoint
+            //Text item=localCurrentWindSpeed
+            //Text item=localCurrentWindDirection
+            //Text item=localCurrentGustSpeed
+            //Text item=localCurrentCloudiness
+            //Text item=localCurrentUvindex
+            //Text item=localCurrentRainVolume
+            //Text item=localCurrentSnowVolume
+            //Text item=localCurrentVisibility
+        }
+        /*
+        Frame label="Local forecast for today" {
+            Text item=localTodayTimestamp
+            Text item=localTodayPrecipProbability
+            Text item=localTodaySunrise
+            Text item=localTodaySunset
+            Text item=localTodayCondition
+            Image item=localTodayConditionIcon
+            Text item=localTodayMinTemperature
+            Text item=localTodayMaxTemperature
+            Text item=localTodayMorningTemperature
+            Text item=localTodayMorningApparent
+            Text item=localTodayDayTemperature
+            Text item=localTodayDayApparent
+            Text item=localTodayEveningTemperature
+            Text item=localTodayEveningApparent
+            Text item=localTodayNightTemperature
+            Text item=localTodayNightApparent
+            Text item=localTodayPressure
+            Text item=localTodayHumidity
+            Text item=localTodayDewpoint
+            Text item=localTodayWindSpeed
+            Text item=localTodayWindDirection
+            Text item=localTodayGustSpeed
+            Text item=localTodayCloudiness
+            Text item=localTodayUvindex
+            Text item=localTodayRainVolume
+            Text item=localTodaySnowVolume
+            Text item=localTodayVisibility
+        }
+        */
+        /*
+        Frame label="Local forecast for tomorrow" {
+            Text item=localTomorrowTimestamp
+            Text item=localTomorrowPrecipProbability
+            Text item=localTomorrowSunrise
+            Text item=localTomorrowSunset
+            Text item=localTomorrowCondition
+            Image item=localTomorrowConditionIcon
+            Text item=localTomorrowMinTemperature
+            Text item=localTomorrowMaxTemperature
+            Text item=localTomorrowMorningTemperature
+            Text item=localTomorrowMorningApparent
+            Text item=localTomorrowDayTemperature
+            Text item=localTomorrowDayApparent
+            Text item=localTomorrowEveningTemperature
+            Text item=localTomorrowEveningApparent
+            Text item=localTomorrowNightTemperature
+            Text item=localTomorrowNightApparent
+            Text item=localTomorrowPressure
+            Text item=localTomorrowHumidity
+            Text item=localTomorrowDewpoint
+            Text item=localTomorrowWindSpeed
+            Text item=localTomorrowWindDirection
+            Text item=localTomorrowGustSpeed
+            Text item=localTomorrowCloudiness
+            Text item=localTomorrowUvindex
+            Text item=localTomorrowRainVolume
+            Text item=localTomorrowSnowVolume
+            Text item=localTomorrowVisibility
+        }
+        */
+        /*
+        Frame label="Local forecast in 6 days" {
+            Text item=localDay6Timestamp
+            Text item=localDay6PrecipProbability
+            Text item=localDay6Sunrise
+            Text item=localDay6Sunset
+            Text item=localDay6Condition
+            Image item=localDay6ConditionIcon
+            Text item=localDay6MinTemperature
+            Text item=localDay6MaxTemperature
+            Text item=localDay6MorningTemperature
+            Text item=localDay6MorningApparent
+            Text item=localDay6DayTemperature
+            Text item=localDay6DayApparent
+            Text item=localDay6EveningTemperature
+            Text item=localDay6EveningApparent
+            Text item=localDay6NightTemperature
+            Text item=localDay6NightApparent
+            Text item=localDay6Pressure
+            Text item=localDay6Humidity
+            Text item=localDay6Dewpoint
+            Text item=localDay6WindSpeed
+            Text item=localDay6WindDirection
+            Text item=localDay6GustSpeed
+            Text item=localDay6Cloudiness
+            Text item=localDay6Uvindex
+            Text item=localDay6RainVolume
+            Text item=localDay6SnowVolume
+            Text item=localDay6Visibility
+            Text item=localDay6SnowVolume
+        }
+        */
+        /*
+        Frame label="Yesterdays local weather" {
+            Text item=localHistory1LastMeasurement
+            Text item=localHistory1Condition
+            Text item=localHistory1Sunrise
+            Text item=localHistory1Sunset
+            Image item=localHistory1ConditionIcon
+            Text item=localHistory1Temperature
+            Text item=localHistory1ApparentTemperature
+            Text item=localHistory1Pressure
+            Text item=localHistory1Humidity
+            Text item=localHistory1Dewpoint
+            Text item=localHistory1WindSpeed
+            Text item=localHistory1WindDirection
+            Text item=localHistory1GustSpeed
+            Text item=localHistory1Cloudiness
+            Text item=localHistory1Uvindex
+            Text item=localHistory1RainVolume
+            Text item=localHistory1SnowVolume
+            Text item=localHistory1Visibility
+        }
+        */
 }
