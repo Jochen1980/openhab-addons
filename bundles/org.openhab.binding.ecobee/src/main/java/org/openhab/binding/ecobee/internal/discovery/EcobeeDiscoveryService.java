@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2010-2020 Contributors to the openHAB project
+ * Copyright (c) 2010-2021 Contributors to the openHAB project
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information.
@@ -153,7 +153,7 @@ public class EcobeeDiscoveryService extends AbstractDiscoveryService implements 
 
     private synchronized void discoverSensors() {
         List<Thing> thermostatThings = bridgeHandler.getThing().getThings();
-        if (thermostatThings.size() == 0) {
+        if (thermostatThings.isEmpty()) {
             logger.debug("EcobeeDiscovery: Skipping sensor discovery because there are no thermostat things");
             return;
         }

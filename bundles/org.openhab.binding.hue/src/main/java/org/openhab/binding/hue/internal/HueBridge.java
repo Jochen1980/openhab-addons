@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2010-2020 Contributors to the openHAB project
+ * Copyright (c) 2010-2021 Contributors to the openHAB project
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information.
@@ -844,7 +844,7 @@ public class HueBridge {
                     return super.doNetwork(address, requestMethod, body);
                 } else {
                     String extractedAddress = Util.quickMatch("^http://[^/]+(.+)$", address);
-                    JsonElement commandBody = new JsonParser().parse(body);
+                    JsonElement commandBody = body == null ? null : JsonParser.parseString(body);
                     scheduleCommand = new ScheduleCommand(extractedAddress, requestMethod, commandBody);
 
                     // Return a fake result that will cause an exception and the callback to end

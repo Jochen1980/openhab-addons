@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2010-2020 Contributors to the openHAB project
+ * Copyright (c) 2010-2021 Contributors to the openHAB project
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information.
@@ -243,7 +243,7 @@ public class NeoHubHandler extends BaseBridgeHandler {
 
             @Nullable
             List<? extends AbstractRecord> devices = deviceData.getDevices();
-            if (devices == null || devices.size() == 0) {
+            if (devices == null || devices.isEmpty()) {
                 logger.warn(MSG_FMT_DEVICE_POLL_ERR, "no devices found");
                 updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.COMMUNICATION_ERROR);
                 return null;

@@ -117,7 +117,7 @@ For security reasons the credentials are automatically deleted from the thing co
 |        |key            |String   |Send key code to the receiver (see code table below)                      |
 |        |mute           |Switch   |Mute volume (mute the speaker)                                            |
 |status  |playMode       |String   |Current play mode - this info is not reliable                             |
-|        |channelCode    |Number   |The channel code from the EPG.                                            |
+|        |channelCode    |Number   |The channel code from the EPG.                                            |
 |program |title          |String   |Title of the running program or video being played                        |
 |        |text           |String   |Some description (as reported by the receiver, could be empty)            |
 |        |start          |DateTime |Time when the program started                                             |
@@ -130,6 +130,7 @@ Please note:
 The binding tries to detect and maintain the correct state, but due to device limitations this is not always possible.
 Make sure the receiver's and binding's state are in sync when OH is restarted (binding assumes state is OFF).
 - Channels receiving event information get updated when changing the channel or playing a video.
+
 There is no way to read the current status, therefore they don't get initialized on startup nor being updated in real-time.
 
 The player channel supports the following actions:

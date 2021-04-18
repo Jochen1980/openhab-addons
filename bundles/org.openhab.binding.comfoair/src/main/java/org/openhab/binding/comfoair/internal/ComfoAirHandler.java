@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2010-2020 Contributors to the openHAB project
+ * Copyright (c) 2010-2021 Contributors to the openHAB project
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information.
@@ -87,7 +87,7 @@ public class ComfoAirHandler extends BaseThingHandler {
                         Collection<ComfoAirCommand> affectedReadCommands = ComfoAirCommandType
                                 .getAffectedReadCommands(channelId, keysToUpdate);
 
-                        if (affectedReadCommands.size() > 0) {
+                        if (!affectedReadCommands.isEmpty()) {
                             Runnable updateThread = new AffectedItemsUpdateThread(affectedReadCommands);
                             affectedItemsPoller = scheduler.schedule(updateThread, 3, TimeUnit.SECONDS);
                         }
